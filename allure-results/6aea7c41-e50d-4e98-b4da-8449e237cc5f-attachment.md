@@ -1,0 +1,710 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Hooks.spec.ts >> click on Admin link
+- Location: tests\Hooks.spec.ts:10:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded while running "afterEach" hook.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - link [ref=f2e4] [cursor=pointer]:
+        - /url: http://www.orangehrm.com/
+        - img "OrangeHRM" [ref=f2e5]
+      - link "Welcome Suresh" [active] [ref=f2e6] [cursor=pointer]:
+        - /url: "#"
+      - link [ref=f2e11] [cursor=pointer]:
+        - /url: /symfony/web/index.php/help/help?label=admin_viewSystemUsers
+      - button "Subscribe" [ref=f2e16]
+      - button "Marketplace" [ref=f2e18]
+      - list [ref=f2e20]:
+        - listitem [ref=f2e21]:
+          - link "About" [ref=f2e22] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=f2e23]:
+          - link "Support" [ref=f2e24] [cursor=pointer]:
+            - /url: /symfony/web/index.php/support/index
+        - listitem [ref=f2e25]:
+          - link "Change Password" [ref=f2e26] [cursor=pointer]:
+            - /url: /symfony/web/index.php/admin/changeUserPassword
+        - listitem [ref=f2e27]:
+          - link "Logout" [ref=f2e28] [cursor=pointer]:
+            - /url: /symfony/web/index.php/auth/logout
+      - generic:
+        - generic:
+          - generic "1"
+    - list [ref=f2e30]:
+      - listitem [ref=f2e31]:
+        - link "Admin" [ref=f2e32] [cursor=pointer]:
+          - /url: /symfony/web/index.php/admin/viewAdminModule
+        - list [ref=f2e34]:
+          - listitem [ref=f2e35]:
+            - link "User Management" [ref=f2e36] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=f2e37]:
+              - listitem [ref=f2e38]:
+                - link "Users" [ref=f2e39] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewSystemUsers
+          - listitem [ref=f2e40]:
+            - link "Job" [ref=f2e41] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=f2e42]:
+              - listitem [ref=f2e43]:
+                - link "Job Titles" [ref=f2e44] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewJobTitleList
+              - listitem [ref=f2e45]:
+                - link "Pay Grades" [ref=f2e46] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewPayGrades
+              - listitem [ref=f2e47]:
+                - link "Employment Status" [ref=f2e48] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/employmentStatus
+              - listitem [ref=f2e49]:
+                - link "Job Categories" [ref=f2e50] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/jobCategory
+              - listitem [ref=f2e51]:
+                - link "Work Shifts" [ref=f2e52] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/workShift
+          - listitem [ref=f2e53]:
+            - link "Organization" [ref=f2e54] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=f2e55]:
+              - listitem [ref=f2e56]:
+                - link "General Information" [ref=f2e57] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewOrganizationGeneralInformation
+              - listitem [ref=f2e58]:
+                - link "Locations" [ref=f2e59] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewLocations
+              - listitem [ref=f2e60]:
+                - link "Structure" [ref=f2e61] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewCompanyStructure
+          - listitem [ref=f2e62]:
+            - link "Qualifications" [ref=f2e63] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=f2e64]:
+              - listitem [ref=f2e65]:
+                - link "Skills" [ref=f2e66] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewSkills
+              - listitem [ref=f2e67]:
+                - link "Education" [ref=f2e68] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewEducation
+              - listitem [ref=f2e69]:
+                - link "Licenses" [ref=f2e70] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewLicenses
+              - listitem [ref=f2e71]:
+                - link "Languages" [ref=f2e72] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewLanguages
+              - listitem [ref=f2e73]:
+                - link "Memberships" [ref=f2e74] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/membership
+          - listitem [ref=f2e75]:
+            - link "Nationalities" [ref=f2e76] [cursor=pointer]:
+              - /url: /symfony/web/index.php/admin/nationality
+          - listitem [ref=f2e77]:
+            - link "Corporate Branding" [ref=f2e78] [cursor=pointer]:
+              - /url: /symfony/web/index.php/admin/addTheme
+          - listitem [ref=f2e79]:
+            - link "Configuration" [ref=f2e80] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=f2e81]:
+              - listitem [ref=f2e82]:
+                - link "Email Configuration" [ref=f2e83] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/listMailConfiguration
+              - listitem [ref=f2e84]:
+                - link "Email Subscriptions" [ref=f2e85] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewEmailNotification
+              - listitem [ref=f2e86]:
+                - link "Localization" [ref=f2e87] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/localization
+              - listitem [ref=f2e88]:
+                - link "Language Packages" [ref=f2e89] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/languagePackage
+              - listitem [ref=f2e90]:
+                - link "Modules" [ref=f2e91] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewModules
+              - listitem [ref=f2e92]:
+                - link "Social Media Authentication" [ref=f2e93] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/openIdProvider
+              - listitem [ref=f2e94]:
+                - link "Register OAuth Client" [ref=f2e95] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/registerOAuthClient
+      - listitem [ref=f2e96]:
+        - link "PIM" [ref=f2e97] [cursor=pointer]:
+          - /url: /symfony/web/index.php/pim/viewPimModule
+        - list [ref=f2e99]:
+          - listitem [ref=f2e100]:
+            - link "Configuration" [ref=f2e101] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=f2e102]:
+              - listitem [ref=f2e103]:
+                - link "Optional Fields" [ref=f2e104] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/configurePim
+              - listitem [ref=f2e105]:
+                - link "Custom Fields" [ref=f2e106] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/listCustomFields
+              - listitem [ref=f2e107]:
+                - link "Data Import" [ref=f2e108] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/pimCsvImport
+              - listitem [ref=f2e109]:
+                - link "Reporting Methods" [ref=f2e110] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewReportingMethods
+              - listitem [ref=f2e111]:
+                - link "Termination Reasons" [ref=f2e112] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewTerminationReasons
+          - listitem [ref=f2e113]:
+            - link "Employee List" [ref=f2e114] [cursor=pointer]:
+              - /url: /symfony/web/index.php/pim/viewEmployeeList/reset/1
+          - listitem [ref=f2e115]:
+            - link "Add Employee" [ref=f2e116] [cursor=pointer]:
+              - /url: /symfony/web/index.php/pim/addEmployee
+          - listitem [ref=f2e117]:
+            - link "Reports" [ref=f2e118] [cursor=pointer]:
+              - /url: /symfony/web/index.php/core/viewDefinedPredefinedReports/reportGroup/3/reportType/PIM_DEFINED
+      - listitem [ref=f2e119]:
+        - link "Leave" [ref=f2e120] [cursor=pointer]:
+          - /url: /symfony/web/index.php/leave/viewLeaveModule
+        - list [ref=f2e122]:
+          - listitem [ref=f2e123]:
+            - link "Apply" [ref=f2e124] [cursor=pointer]:
+              - /url: /symfony/web/index.php/leave/applyLeave
+          - listitem [ref=f2e125]:
+            - link "My Leave" [ref=f2e126] [cursor=pointer]:
+              - /url: /symfony/web/index.php/leave/viewMyLeaveList/reset/1
+          - listitem [ref=f2e127]:
+            - link "Entitlements" [ref=f2e128] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=f2e129]:
+              - listitem [ref=f2e130]:
+                - link "Add Entitlements" [ref=f2e131] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/leave/addLeaveEntitlement
+              - listitem [ref=f2e132]:
+                - link "Employee Entitlements" [ref=f2e133] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/leave/viewLeaveEntitlements/reset/1
+              - listitem [ref=f2e134]:
+                - link "My Entitlements" [ref=f2e135] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/leave/viewMyLeaveEntitlements/reset/1
+          - listitem [ref=f2e136]:
+            - link "Reports" [ref=f2e137] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=f2e138]:
+              - listitem [ref=f2e139]:
+                - link "Leave Entitlements and Usage Report" [ref=f2e140] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/leave/viewLeaveBalanceReport
+              - listitem [ref=f2e141]:
+                - link "My Leave Entitlements and Usage Report" [ref=f2e142] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/leave/viewMyLeaveBalanceReport
+          - listitem [ref=f2e143]:
+            - link "Configure" [ref=f2e144] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=f2e145]:
+              - listitem [ref=f2e146]:
+                - link "Leave Period" [ref=f2e147] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/leave/defineLeavePeriod
+              - listitem [ref=f2e148]:
+                - link "Leave Types" [ref=f2e149] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/leave/leaveTypeList
+              - listitem [ref=f2e150]:
+                - link "Work Week" [ref=f2e151] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/leave/defineWorkWeek
+              - listitem [ref=f2e152]:
+                - link "Holidays" [ref=f2e153] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/leave/viewHolidayList
+          - listitem [ref=f2e154]:
+            - link "Leave List" [ref=f2e155] [cursor=pointer]:
+              - /url: /symfony/web/index.php/leave/viewLeaveList/reset/1
+          - listitem [ref=f2e156]:
+            - link "Assign Leave" [ref=f2e157] [cursor=pointer]:
+              - /url: /symfony/web/index.php/leave/assignLeave
+      - listitem [ref=f2e158]:
+        - link "Time" [ref=f2e159] [cursor=pointer]:
+          - /url: /symfony/web/index.php/time/viewTimeModule
+        - list [ref=f2e161]:
+          - listitem [ref=f2e162]:
+            - link "Timesheets" [ref=f2e163] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=f2e164]:
+              - listitem [ref=f2e165]:
+                - link "My Timesheets" [ref=f2e166] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/time/viewMyTimesheet
+              - listitem [ref=f2e167]:
+                - link "Employee Timesheets" [ref=f2e168] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/time/viewEmployeeTimesheet
+          - listitem [ref=f2e169]:
+            - link "Attendance" [ref=f2e170] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=f2e171]:
+              - listitem [ref=f2e172]:
+                - link "My Records" [ref=f2e173] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/attendance/viewMyAttendanceRecord
+              - listitem [ref=f2e174]:
+                - link "Punch In/Out" [ref=f2e175] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/attendance/punchIn
+              - listitem [ref=f2e176]:
+                - link "Employee Records" [ref=f2e177] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/attendance/viewAttendanceRecord
+              - listitem [ref=f2e178]:
+                - link "Configuration" [ref=f2e179] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/attendance/configure
+          - listitem [ref=f2e180]:
+            - link "Reports" [ref=f2e181] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=f2e182]:
+              - listitem [ref=f2e183]:
+                - link "Project Reports" [ref=f2e184] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/time/displayProjectReportCriteria?reportId=1
+              - listitem [ref=f2e185]:
+                - link "Employee Reports" [ref=f2e186] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/time/displayEmployeeReportCriteria?reportId=2
+              - listitem [ref=f2e187]:
+                - link "Attendance Summary" [ref=f2e188] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/time/displayAttendanceSummaryReportCriteria?reportId=4
+          - listitem [ref=f2e189]:
+            - link "Project Info" [ref=f2e190] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=f2e191]:
+              - listitem [ref=f2e192]:
+                - link "Customers" [ref=f2e193] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewCustomers
+              - listitem [ref=f2e194]:
+                - link "Projects" [ref=f2e195] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewProjects
+      - listitem [ref=f2e196]:
+        - link "Recruitment" [ref=f2e197] [cursor=pointer]:
+          - /url: /symfony/web/index.php/recruitment/viewRecruitmentModule
+        - list [ref=f2e199]:
+          - listitem [ref=f2e200]:
+            - link "Candidates" [ref=f2e201] [cursor=pointer]:
+              - /url: /symfony/web/index.php/recruitment/viewCandidates
+          - listitem [ref=f2e202]:
+            - link "Vacancies" [ref=f2e203] [cursor=pointer]:
+              - /url: /symfony/web/index.php/recruitment/viewJobVacancy
+      - listitem [ref=f2e204]:
+        - link "My Info" [ref=f2e205] [cursor=pointer]:
+          - /url: /symfony/web/index.php/pim/viewMyDetails
+        - list [ref=f2e207]:
+          - listitem
+      - listitem [ref=f2e208]:
+        - link "Performance" [ref=f2e209] [cursor=pointer]:
+          - /url: "#"
+        - list [ref=f2e211]:
+          - listitem [ref=f2e212]:
+            - link "Configure" [ref=f2e213] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=f2e214]:
+              - listitem [ref=f2e215]:
+                - link "KPIs" [ref=f2e216] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/performance/searchKpi
+              - listitem [ref=f2e217]:
+                - link "Trackers" [ref=f2e218] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/performance/addPerformanceTracker
+          - listitem [ref=f2e219]:
+            - link "Manage Reviews" [ref=f2e220] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=f2e221]:
+              - listitem [ref=f2e222]:
+                - link "Manage Reviews" [ref=f2e223] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/performance/searchPerformancReview
+              - listitem [ref=f2e224]:
+                - link "My Reviews" [ref=f2e225] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/performance/myPerformanceReview
+              - listitem [ref=f2e226]:
+                - link "Review List" [ref=f2e227] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/performance/searchEvaluatePerformancReview
+          - listitem [ref=f2e228]:
+            - link "My Trackers" [ref=f2e229] [cursor=pointer]:
+              - /url: /symfony/web/index.php/performance/viewMyPerformanceTrackerList
+          - listitem [ref=f2e230]:
+            - link "Employee Trackers" [ref=f2e231] [cursor=pointer]:
+              - /url: /symfony/web/index.php/performance/viewEmployeePerformanceTrackerList
+      - listitem [ref=f2e232]:
+        - link "Dashboard" [ref=f2e233] [cursor=pointer]:
+          - /url: /symfony/web/index.php/dashboard
+        - list [ref=f2e235]:
+          - listitem
+      - listitem [ref=f2e236]:
+        - link "Directory" [ref=f2e237] [cursor=pointer]:
+          - /url: /symfony/web/index.php/directory/viewDirectory/reset/1
+        - list [ref=f2e239]:
+          - listitem
+      - listitem [ref=f2e240]:
+        - link "Maintenance" [ref=f2e241] [cursor=pointer]:
+          - /url: /symfony/web/index.php/maintenance/purgeEmployee
+        - list [ref=f2e243]:
+          - listitem [ref=f2e244]:
+            - link "Purge Records" [ref=f2e245] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=f2e246]:
+              - listitem [ref=f2e247]:
+                - link "Employee Records" [ref=f2e248] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/maintenance/purgeEmployee
+              - listitem [ref=f2e249]:
+                - link "Candidate Records" [ref=f2e250] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/maintenance/purgeCandidateData
+          - listitem [ref=f2e251]:
+            - link "Access Records" [ref=f2e252] [cursor=pointer]:
+              - /url: /symfony/web/index.php/maintenance/accessEmployeeData
+      - listitem [ref=f2e253]:
+        - link "Buzz" [ref=f2e254] [cursor=pointer]:
+          - /url: /symfony/web/index.php/buzz/viewBuzz
+        - list [ref=f2e256]:
+          - listitem
+    - generic [ref=f2e257]:
+      - generic [ref=f2e258]:
+        - heading "System Users" [level=1] [ref=f2e260]
+        - group [ref=f2e263]:
+          - list [ref=f2e264]:
+            - listitem [ref=f2e265]:
+              - generic [ref=f2e266]: Username
+              - textbox "Username" [ref=f2e267]
+            - listitem [ref=f2e268]:
+              - generic [ref=f2e269]: User Role
+              - combobox "User Role" [ref=f2e270]:
+                - option "All" [selected]
+                - option "Admin"
+                - option "ESS"
+            - listitem [ref=f2e271]:
+              - generic [ref=f2e272]: Employee Name
+              - textbox [ref=f2e273]: Type for hints...
+            - listitem [ref=f2e274]:
+              - generic [ref=f2e275]: Status
+              - combobox "Status" [ref=f2e276]:
+                - option "All" [selected]
+                - option "Enabled"
+                - option "Disabled"
+          - paragraph [ref=f2e277]:
+            - button "Search" [ref=f2e278]
+            - button "Reset" [ref=f2e279]
+        - link ">" [ref=f2e280] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=f2e284]:
+        - generic [ref=f2e285]:
+          - button "Add" [ref=f2e286]
+          - button "Delete" [disabled] [ref=f2e287]
+        - table [ref=f2e291]:
+          - rowgroup [ref=f2e292]:
+            - row [ref=f2e293]:
+              - columnheader [ref=f2e294]:
+                - checkbox [ref=f2e295]
+              - columnheader [ref=f2e296] [cursor=pointer]:
+                - link "Username" [ref=f2e297]:
+                  - /url: http://orangehrm.qedgetech.com/symfony/web/index.php/admin/viewSystemUsers?sortField=user_name&sortOrder=ASC
+              - columnheader [ref=f2e298] [cursor=pointer]:
+                - link "User Role" [ref=f2e299]:
+                  - /url: http://orangehrm.qedgetech.com/symfony/web/index.php/admin/viewSystemUsers?sortField=display_name&sortOrder=ASC
+              - columnheader [ref=f2e300] [cursor=pointer]:
+                - link "Employee Name" [ref=f2e301]:
+                  - /url: http://orangehrm.qedgetech.com/symfony/web/index.php/admin/viewSystemUsers?sortField=u.Employee.emp_firstname&sortOrder=ASC
+              - columnheader [ref=f2e302] [cursor=pointer]:
+                - link "Status" [ref=f2e303]:
+                  - /url: http://orangehrm.qedgetech.com/symfony/web/index.php/admin/viewSystemUsers?sortField=status&sortOrder=ASC
+          - rowgroup [ref=f2e304]:
+            - row [ref=f2e305]:
+              - cell [ref=f2e306]
+              - cell [ref=f2e307]:
+                - link "Admin" [ref=f2e308] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=1
+              - cell "Admin" [ref=f2e309]
+              - cell "Suresh Babu" [ref=f2e310]
+              - cell "Enabled" [ref=f2e311]
+            - row [ref=f2e312]:
+              - cell [ref=f2e313]:
+                - checkbox [ref=f2e314]
+              - cell [ref=f2e315]:
+                - link "Ajaydeo" [ref=f2e316] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=58
+              - cell "ESS" [ref=f2e317]
+              - cell "Ajay Deo" [ref=f2e318]
+              - cell "Enabled" [ref=f2e319]
+            - row [ref=f2e320]:
+              - cell [ref=f2e321]:
+                - checkbox [ref=f2e322]
+              - cell [ref=f2e323]:
+                - link "Ashwini" [ref=f2e324] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=13
+              - cell "ESS" [ref=f2e325]
+              - cell "Ashwini Reddy" [ref=f2e326]
+              - cell "Enabled" [ref=f2e327]
+            - row [ref=f2e328]:
+              - cell [ref=f2e329]:
+                - checkbox [ref=f2e330]
+              - cell [ref=f2e331]:
+                - link "AshwiniReddy" [ref=f2e332] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=25
+              - cell "ESS" [ref=f2e333]
+              - cell "Ashu R" [ref=f2e334]
+              - cell "Enabled" [ref=f2e335]
+            - row [ref=f2e336]:
+              - cell [ref=f2e337]:
+                - checkbox [ref=f2e338]
+              - cell [ref=f2e339]:
+                - link "Banty" [ref=f2e340] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=61
+              - cell "ESS" [ref=f2e341]
+              - cell "Sayed Lathifur Raheman" [ref=f2e342]
+              - cell "Enabled" [ref=f2e343]
+            - row [ref=f2e344]:
+              - cell [ref=f2e345]:
+                - checkbox [ref=f2e346]
+              - cell [ref=f2e347]:
+                - link "Ganesh" [ref=f2e348] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=51
+              - cell "ESS" [ref=f2e349]
+              - cell "Ashwini Reddy" [ref=f2e350]
+              - cell "Enabled" [ref=f2e351]
+            - row [ref=f2e352]:
+              - cell [ref=f2e353]:
+                - checkbox [ref=f2e354]
+              - cell [ref=f2e355]:
+                - link "Ganeshreddy" [ref=f2e356] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=52
+              - cell "ESS" [ref=f2e357]
+              - cell "Ashwini Reddy" [ref=f2e358]
+              - cell "Enabled" [ref=f2e359]
+            - row [ref=f2e360]:
+              - cell [ref=f2e361]:
+                - checkbox [ref=f2e362]
+              - cell [ref=f2e363]:
+                - link "Ganeshreddys" [ref=f2e364] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=53
+              - cell "ESS" [ref=f2e365]
+              - cell "Ashwini Reddy" [ref=f2e366]
+              - cell "Enabled" [ref=f2e367]
+            - row [ref=f2e368]:
+              - cell [ref=f2e369]:
+                - checkbox [ref=f2e370]
+              - cell [ref=f2e371]:
+                - link "Ganeshreddysavada" [ref=f2e372] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=54
+              - cell "ESS" [ref=f2e373]
+              - cell "Ashwini Reddy" [ref=f2e374]
+              - cell "Enabled" [ref=f2e375]
+            - row [ref=f2e376]:
+              - cell [ref=f2e377]:
+                - checkbox [ref=f2e378]
+              - cell [ref=f2e379]:
+                - link "goud123" [ref=f2e380] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=40
+              - cell "ESS" [ref=f2e381]
+              - cell "gangu goud" [ref=f2e382]
+              - cell "Enabled" [ref=f2e383]
+            - row [ref=f2e384]:
+              - cell [ref=f2e385]:
+                - checkbox [ref=f2e386]
+              - cell [ref=f2e387]:
+                - link "king1230" [ref=f2e388] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=37
+              - cell "ESS" [ref=f2e389]
+              - cell "king1209 cobra12" [ref=f2e390]
+              - cell "Enabled" [ref=f2e391]
+            - row [ref=f2e392]:
+              - cell [ref=f2e393]:
+                - checkbox [ref=f2e394]
+              - cell [ref=f2e395]:
+                - link "king123071" [ref=f2e396] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=38
+              - cell "ESS" [ref=f2e397]
+              - cell "king1209 cobra12" [ref=f2e398]
+              - cell "Enabled" [ref=f2e399]
+            - row [ref=f2e400]:
+              - cell [ref=f2e401]:
+                - checkbox [ref=f2e402]
+              - cell [ref=f2e403]:
+                - link "Mohammads" [ref=f2e404] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=49
+              - cell "ESS" [ref=f2e405]
+              - cell "Mohammad Sikh" [ref=f2e406]
+              - cell "Enabled" [ref=f2e407]
+            - row [ref=f2e408]:
+              - cell [ref=f2e409]:
+                - checkbox [ref=f2e410]
+              - cell [ref=f2e411]:
+                - link "mubs Shaikh" [ref=f2e412] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=56
+              - cell "ESS" [ref=f2e413]
+              - cell "mubs Shaikh nad" [ref=f2e414]
+              - cell "Enabled" [ref=f2e415]
+            - row [ref=f2e416]:
+              - cell [ref=f2e417]:
+                - checkbox [ref=f2e418]
+              - cell [ref=f2e419]:
+                - link "naveenkumar" [ref=f2e420] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=41
+              - cell "ESS" [ref=f2e421]
+              - cell "Ashwini Reddy" [ref=f2e422]
+              - cell "Enabled" [ref=f2e423]
+            - row [ref=f2e424]:
+              - cell [ref=f2e425]:
+                - checkbox [ref=f2e426]
+              - cell [ref=f2e427]:
+                - link "nitaji" [ref=f2e428] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=47
+              - cell "Admin" [ref=f2e429]
+              - cell "Suresh Babu" [ref=f2e430]
+              - cell "Enabled" [ref=f2e431]
+            - row [ref=f2e432]:
+              - cell [ref=f2e433]:
+                - checkbox [ref=f2e434]
+              - cell [ref=f2e435]:
+                - link "Nitamam" [ref=f2e436] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=48
+              - cell "ESS" [ref=f2e437]
+              - cell "Suresh B" [ref=f2e438]
+              - cell "Enabled" [ref=f2e439]
+            - row [ref=f2e440]:
+              - cell [ref=f2e441]:
+                - checkbox [ref=f2e442]
+              - cell [ref=f2e443]:
+                - link "Nithyashree" [ref=f2e444] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=26
+              - cell "ESS" [ref=f2e445]
+              - cell "Nithya shree" [ref=f2e446]
+              - cell "Enabled" [ref=f2e447]
+            - row [ref=f2e448]:
+              - cell [ref=f2e449]:
+                - checkbox [ref=f2e450]
+              - cell [ref=f2e451]:
+                - link "Richards" [ref=f2e452] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=42
+              - cell "ESS" [ref=f2e453]
+              - cell "Richards Demo" [ref=f2e454]
+              - cell "Enabled" [ref=f2e455]
+            - row [ref=f2e456]:
+              - cell [ref=f2e457]:
+                - checkbox [ref=f2e458]
+              - cell [ref=f2e459]:
+                - link "Ricky" [ref=f2e460] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=59
+              - cell "ESS" [ref=f2e461]
+              - cell "Sayed Safiur Raheman" [ref=f2e462]
+              - cell "Enabled" [ref=f2e463]
+            - row [ref=f2e464]:
+              - cell [ref=f2e465]:
+                - checkbox [ref=f2e466]
+              - cell [ref=f2e467]:
+                - link "rumys" [ref=f2e468] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=60
+              - cell "ESS" [ref=f2e469]
+              - cell "Sk Rika Khan" [ref=f2e470]
+              - cell "Enabled" [ref=f2e471]
+            - row [ref=f2e472]:
+              - cell [ref=f2e473]:
+                - checkbox [ref=f2e474]
+              - cell [ref=f2e475]:
+                - link "Sri0309" [ref=f2e476] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=2
+              - cell "ESS" [ref=f2e477]
+              - cell "sreeya sri" [ref=f2e478]
+              - cell "Enabled" [ref=f2e479]
+            - row [ref=f2e480]:
+              - cell [ref=f2e481]:
+                - checkbox [ref=f2e482]
+              - cell [ref=f2e483]:
+                - link "SULBHA GHODAKE" [ref=f2e484] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=46
+              - cell "Admin" [ref=f2e485]
+              - cell "Akarsh Demo" [ref=f2e486]
+              - cell "Enabled" [ref=f2e487]
+            - row [ref=f2e488]:
+              - cell [ref=f2e489]:
+                - checkbox [ref=f2e490]
+              - cell [ref=f2e491]:
+                - link "suresh123" [ref=f2e492] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=24
+              - cell "Admin" [ref=f2e493]
+              - cell "Suresh B" [ref=f2e494]
+              - cell "Enabled" [ref=f2e495]
+            - row [ref=f2e496]:
+              - cell [ref=f2e497]:
+                - checkbox [ref=f2e498]
+              - cell [ref=f2e499]:
+                - link "Talha" [ref=f2e500] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=55
+              - cell "ESS" [ref=f2e501]
+              - cell "Talha Shaikh Nadeem" [ref=f2e502]
+              - cell "Enabled" [ref=f2e503]
+            - row [ref=f2e504]:
+              - cell [ref=f2e505]:
+                - checkbox [ref=f2e506]
+              - cell [ref=f2e507]:
+                - link "Yadava Reddy" [ref=f2e508] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=43
+              - cell "ESS" [ref=f2e509]
+              - cell "Ashwini Reddy" [ref=f2e510]
+              - cell "Enabled" [ref=f2e511]
+            - row [ref=f2e512]:
+              - cell [ref=f2e513]:
+                - checkbox [ref=f2e514]
+              - cell [ref=f2e515]:
+                - link "Yadavareddy" [ref=f2e516] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=35
+              - cell "ESS" [ref=f2e517]
+              - cell "Ashwini Reddy" [ref=f2e518]
+              - cell "Enabled" [ref=f2e519]
+            - row [ref=f2e520]:
+              - cell [ref=f2e521]:
+                - checkbox [ref=f2e522]
+              - cell [ref=f2e523]:
+                - link "YadavareddyMasupatri" [ref=f2e524] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=36
+              - cell "ESS" [ref=f2e525]
+              - cell "Ashwini Reddy" [ref=f2e526]
+              - cell "Enabled" [ref=f2e527]
+            - row [ref=f2e528]:
+              - cell [ref=f2e529]:
+                - checkbox [ref=f2e530]
+              - cell [ref=f2e531]:
+                - link "YAHYA" [ref=f2e532] [cursor=pointer]:
+                  - /url: saveSystemUser?userId=57
+              - cell "ESS" [ref=f2e533]
+              - cell "YAHYA Shaikh SFZ" [ref=f2e534]
+              - cell "Enabled" [ref=f2e535]
+  - generic [ref=f2e536]:
+    - text: OrangeHRM 4.10.1 © 2005 - 2026
+    - link "OrangeHRM, Inc" [ref=f2e537] [cursor=pointer]:
+      - /url: http://www.orangehrm.com
+    - text: . All rights reserved.
+```
+
+# Test source
+
+```ts
+  1  | import test from "@playwright/test";
+  2  | 
+  3  | test.beforeEach(async({page})=>{
+  4  |     await page.goto(process.env.BASE_URL!)
+  5  |     await page.locator('#txtUsername').fill(process.env.BASE_USER!)
+  6  |     await page.locator('#txtPassword').fill(process.env.BASE_PASS!)
+  7  |     await page.locator('#btnLogin').click()
+  8  |     console.log('-------BeforeEach---------------')
+  9  | })
+  10 | test('click on Admin link', async({page})=>{
+  11 |     await page.locator('#menu_admin_viewAdminModule').click()
+  12 |     console.log('Executing Admin Test')
+  13 | })
+  14 | test('click on PIM link', async({page})=>{
+  15 |     await page.locator('#menu_pim_viewPimModule').click()
+  16 |     console.log('Executing PIM Test')
+  17 | })
+  18 | test('click on Leave link', async({page})=>{
+  19 |     await page.locator('#menu_leave_viewLeaveModule').click()
+  20 |     console.log('Executing Leave Test')
+  21 | })
+> 22 | test.afterEach(async({page})=>{
+     |      ^ Test timeout of 30000ms exceeded while running "afterEach" hook.
+  23 |     await page.locator('#welcome').click()
+  24 |     await page.getByAltText('Logout',{exact:true}).click()
+  25 |     console.log('--------AfterEach-----------')
+  26 | })
+```

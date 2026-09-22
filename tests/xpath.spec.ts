@@ -1,0 +1,15 @@
+import test from "@playwright/test";
+test('Using xpath',async({page})=>{
+    await page.goto('https://flights.qedgetech.com/')
+    await page.waitForTimeout(3000)
+    await page.locator("//a[text()='Register ']").click()
+    await page.locator("//input[@name='name']").fill('Akhilesh')
+    await page.locator("(//*[contains(@class,'form')])[5]").fill('7898765')
+    await page.locator("(//form[@name='submenus']//following::input)[3]").fill('Test678@gmail.com')
+    await page.locator("(//*[starts-with(@class,'form')])[7]").fill('Test@123')
+    await page.locator("//div[@class='col-lg-6']/following::select[@name='gender']").selectOption('Male')
+    await page.locator('//*[@name="dob"]').fill('20-12-1967')
+    await page.locator("//*[starts-with(@id,'flex')]").click()
+    await page.locator('//*[@value="Register"]').click()
+    await page.waitForTimeout(3000)
+})

@@ -1,0 +1,25 @@
+{
+  "name": "playwright_automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "All_Scripts": "npx playwright test",
+    "Calendar_Test": "npx playwright test tests/CalendarTest.spec.ts",
+    "Allure-Reports": "npx allure generate allure-results --clean -o allure-report && npx allure open allure-report",
+    "HTML_Report": "npx playwright show-report",
+    "Register_Test": "npx playwright test tests/register.spec.ts",
+    "Hooks_test":"npx playwright test tests/Hooks.spec.ts" 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0",
+    "allure-commandline": "^2.43.0",
+    "allure-playwright": "^3.12.1",
+    "dotenv": "^17.4.2"
+  }
+}

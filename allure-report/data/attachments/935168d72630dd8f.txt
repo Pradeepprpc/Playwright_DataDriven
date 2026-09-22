@@ -1,0 +1,8 @@
+[
+  'First Name*',
+  'Last Name*',
+  'Mobile Number*',
+  'Email*',
+  'Password*',
+  'Keep me signed in'
+]

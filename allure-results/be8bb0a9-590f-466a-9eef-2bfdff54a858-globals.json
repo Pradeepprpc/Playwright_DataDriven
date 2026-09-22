@@ -1,0 +1,1 @@
+{"attachments":[],"errors":[{"message":"afterEach hook failed: Test timeout of 30000ms exceeded while running \"afterEach\" hook.","trace":"Test timeout of 30000ms exceeded while running \"afterEach\" hook.\n    at C:\\Playwright_Automation\\tests\\Hooks.spec.ts:28:6","timestamp":1789539185897}]}
