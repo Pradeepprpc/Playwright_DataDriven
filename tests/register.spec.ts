@@ -1,4 +1,4 @@
-import test from "@playwright/test";
+import test, { chromium, expect } from "@playwright/test";
 
 test('Handling css selectors',async({page})=>{
     //launch url
@@ -13,4 +13,24 @@ test('Handling css selectors',async({page})=>{
     await page.locator("input.form-check-input").click() // class
     await page.locator("button.btn.btn-primary").click() // class 
      await  page.waitForTimeout(3000)
+})
+
+test('browser context', async({page})=>{
+    const browser = await chromium.launch()
+    const context  = await browser.newContext()
+    const page1:any = await context.newPage()
+    await page.goto('https://google.com')
+    await expect.soft(page.locator('[data-pid="23"]').first())
+    .toHaveText('Gmail');
+
+    // await expect.soft(page.locator('[data-pid="23"]').first())
+    // .toBeVisible();
+
+    await browser.close()
+
+})
+
+test('facebook', async({page})=>{
+    await page.goto('https://www.facebook.com/')
+    
 })

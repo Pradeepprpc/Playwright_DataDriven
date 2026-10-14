@@ -39,3 +39,8 @@ test('Swag Labs', async({page})=>{
     await page.locator('input#login-button').click()
     
 })
+
+test('Example test', async ({ page }) => {
+    console.log('Example test is running');
+    await page.goto('https://google.com');
+})
